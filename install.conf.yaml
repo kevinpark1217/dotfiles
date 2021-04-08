@@ -1,0 +1,32 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stderr: true
+
+- clean: ['~', ~/.zsh]
+
+- shell:
+  - [sh setup/prereq.sh, Running pre-installation script]
+
+- create:
+  - ~/.zsh
+
+- link:
+    # Shell stuff
+    ~/.aliases: shell/.aliases
+    ~/.zsh/: 
+      glob: true
+      path: shell/zsh/*
+    ~/.zsh/antigen.zsh: autogen/antigen.zsh
+
+    # Git Stuff
+    # Skip if exists
+    ~/.gitconfig: 
+      if: '[ ! -f ~/.gitconfig ]'
+      path: git/.gitconfig
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sh setup/finalize.sh, Running post-installation script]

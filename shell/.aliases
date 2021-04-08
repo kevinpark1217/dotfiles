@@ -1,0 +1,5 @@
+# exa aliases
+alias ls='exa'
+alias l='exa -lbF --git'
+alias ll='exa -lbGF --git'
+alias la='exa -labF --git' 
