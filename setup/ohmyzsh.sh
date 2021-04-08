@@ -4,11 +4,11 @@
 # Check if oh-my-zsh is installed
 ZSH="$HOME/.oh-my-zsh"
 if [ ! -d "$ZSH" ]; then
-  echo 'Installing oh-my-zsh'
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo 'Installing oh-my-zsh'
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
-  echo 'Updating oh-my-zsh'
-  zsh -c "source $ZSH/oh-my-zsh.sh && omz update"
+    echo 'Updating oh-my-zsh'
+    zsh -c "source $ZSH/oh-my-zsh.sh && omz update"
 fi
 
 

@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+DIR=$(dirname "$0")
+
 # Install prereq
-bash $(dirname "$0")/ohmyzsh.sh
-bash $(dirname "$0")/sdkman.sh
+bash $DIR/ohmyzsh.sh
+bash $DIR/vimrc.sh
+bash $DIR/sdkman.sh
 
 # OS Dependant Installation
 case "$(uname -s)" in
@@ -11,11 +14,11 @@ case "$(uname -s)" in
     ;;
     Darwin*)
         # Mac OS
-        bash $(dirname "$0")/brew.sh
+        bash $DIR/brew.sh
     ;;
     *)
         echo "Unsupported OS"
         exit 1
 esac
 
-bash $(dirname "$0")/exa.sh
+bash $DIR/exa.sh
