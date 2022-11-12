@@ -11,6 +11,8 @@ antigen apply
 
 # Custom Spaceship-Prompt Settings
 SPACESHIP_DIR_TRUNC=5
+SPACESHIP_KUBECTL_SHOW=true
+SPACESHIP_KUBECTL_VERSION_SHOW=false
 
 # My custom aliases
 source $HOME/.aliases
