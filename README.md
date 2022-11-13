@@ -1,5 +1,17 @@
 # dotfiles
-> My personal `.dotfiles`
+ My personal `.dotfiles`
+
+## Prerequisite
+
+### [Homebrew](https://brew.sh/) (For Mac)
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### [Rust](https://www.rust-lang.org/tools/install)
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 ## Setup
 It's easy as 1-2-3!

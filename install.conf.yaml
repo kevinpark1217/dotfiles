@@ -5,10 +5,13 @@
     shell:
       stderr: true
 
-- clean: ['~', ~/.zsh]
+- clean: [~/.zsh]
 
 - shell:
-  - [sh setup/prereq.sh, Running pre-installation script]
+  - [sh setup/ohmyzsh.sh, Installing Oh My Zsh]
+  - [sh setup/vimrc.sh, Installing Vimrc]
+  - [sh setup/sdkman.sh, Installing SdkMan]
+  - [sh setup/exa.sh, Installing Exa]
 
 - create:
   - ~/.zsh
@@ -16,14 +19,14 @@
 - link:
     # Shell stuff
     ~/.aliases: shell/.aliases
-    ~/.zsh/: 
+    ~/.zsh/:
       glob: true
       path: shell/zsh/*
     ~/.zsh/antigen.zsh: autogen/antigen.zsh
 
     # Git Stuff
     # Skip if exists
-    ~/.gitconfig: 
+    ~/.gitconfig:
       if: '[ ! -f ~/.gitconfig ]'
       path: git/.gitconfig
 
